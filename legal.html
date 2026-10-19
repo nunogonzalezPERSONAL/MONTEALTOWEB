@@ -26,7 +26,7 @@
 
   AVISO: estos textos son una base sólida redactada a partir de lo
   que la web hace realmente (un formulario de contacto que escribe
-  en una hoja de Google y los vídeos de la portada). No son un
+  en una hoja de Google y los reels de Instagram). No son un
   dictamen jurídico. Si manejáis muchos datos o entráis en
   campañas de pago, que los revise un abogado o una gestoría.
   ─────────────────────────────────────────────────────────────
@@ -61,7 +61,7 @@ a{color:inherit}
 .wrap{width:100%;max-width:760px;margin-inline:auto;padding-inline:var(--pad)}
 
 /* cabecera */
-.top-viejo{border-bottom:1px solid var(--line);padding-block:1.1rem;position:sticky;top:0;background:rgba(255,255,255,.9);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);z-index:10}
+.top{border-bottom:1px solid var(--line);padding-block:1.1rem;position:sticky;top:0;background:rgba(255,255,255,.9);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);z-index:10}
 .top-in{display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
 .brand{display:flex;align-items:center;gap:.6rem;font-family:var(--f-display);font-weight:700;font-size:1.05rem;letter-spacing:-.03em;text-decoration:none}
 .brand svg{height:24px;width:auto;flex:none}
@@ -139,120 +139,13 @@ a[href]{color:var(--ink);text-decoration:underline;text-underline-offset:2px}
 .pie-claim{font-family:var(--f-display);font-weight:600;color:var(--white);font-size:1rem;margin-bottom:.5rem}
 
 @media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}html{scroll-behavior:auto}}
-.logo{display:block;width:auto;flex:none}
-.logo .lg-m1,.logo .lg-m2{fill:#000D2D}
-.logo .lg-a{fill:#93F800}
-.logo.inv .lg-m1,.logo.inv .lg-m2{fill:#FFFFFF}
-/* ═══════════════ BOTONES ═══════════════ */
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;
-  font-family:var(--f-text);font-weight:600;font-size:.95rem;
-  padding:1.05rem 1.9rem;border-radius:100px;
-  transition:transform .35s var(--ease),background-color .35s var(--ease),box-shadow .35s var(--ease);
-  will-change:transform;
-}
-.btn-primary{background:var(--lime);color:var(--navy)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(199,244,100,.45)}
-.btn-ghost{border:1px solid var(--line);color:var(--ink)}
-.btn-ghost:hover{border-color:var(--navy);transform:translateY(-2px)}
-.dark .btn-ghost{border-color:var(--line-dark);color:var(--white)}
-.dark .btn-ghost:hover{border-color:var(--lime)}
-.btn-lg{padding:1.3rem 2.6rem;font-size:1.05rem}
-
-/* ═══════════════ NAV ═══════════════ */
-.nav{
-  position:fixed;inset:0 0 auto 0;z-index:100;
-  padding-block:1rem;
-  background:rgba(255,255,255,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
-  border-bottom:1px solid transparent;
-  transition:border-color .4s var(--ease),padding .4s var(--ease);
-}
-.nav.stuck{border-bottom-color:var(--line);padding-block:.7rem}
-.nav-in{display:flex;align-items:center;justify-content:space-between;gap:2rem}
-.brand{display:flex;align-items:center;gap:.6rem;font-family:var(--f-display);font-weight:700;font-size:1.08rem;letter-spacing:-.03em}
-.brand svg{height:26px;width:auto;flex:none}
-.nav-links{display:flex;gap:2.2rem;font-size:.9rem;font-weight:500;color:var(--ink-60)}
-.nav-links a{position:relative;padding-block:.2rem;transition:color .3s var(--ease)}
-.nav-links a::after{
-  content:'';position:absolute;left:0;bottom:0;height:1.5px;width:0;background:var(--lime);
-  transition:width .35s var(--ease);
-}
-.nav-links a:hover{color:var(--ink)}
-.nav-links a:hover::after{width:100%}
-.nav .btn{padding:.72rem 1.35rem;font-size:.88rem}
-@media(max-width:900px){.nav-links{display:none}}
-
-/* menú: botón hamburguesa y desplegable en móvil */
-.nav-right{display:flex;align-items:center;gap:.55rem}
-.nav-links a[aria-current="page"]{color:var(--ink)}
-.nav-links a[aria-current="page"]::after{width:100%}
-.nav-toggle{display:none;width:44px;height:44px;border-radius:12px;flex-direction:column;align-items:center;justify-content:center;gap:5px;border:1px solid var(--line)}
-.nav-toggle span{display:block;width:18px;height:2px;border-radius:2px;background:var(--navy);transition:transform .35s var(--ease),opacity .3s var(--ease)}
-.nav.open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.nav.open .nav-toggle span:nth-child(2){opacity:0}
-.nav.open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-@media(max-width:900px){
-  .nav-toggle{display:inline-flex}
-  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;
-    padding:.4rem var(--pad) 1.1rem;background:rgba(255,255,255,.98);border-bottom:1px solid var(--line);
-    box-shadow:0 24px 40px -30px rgba(15,23,42,.45)}
-  .nav.open .nav-links{display:flex}
-  .nav-links a{padding:1rem 0;font-size:1.05rem;color:var(--ink);border-bottom:1px solid var(--line)}
-  .nav-links a:last-child{border-bottom:0}
-  .nav-links a::after{display:none}
-}
-@media(max-width:380px){.nav-right .btn{display:none}}
-
-/* ═══════════════ FOOTER ═══════════════ */
-.footer{background:var(--navy);color:var(--white);padding-block:clamp(3.5rem,7vw,5.5rem) 2.5rem}
-.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:2.5rem;padding-bottom:3rem;border-bottom:1px solid var(--line-dark)}
-.footer .brand{color:var(--white)}
-.footer h4+ul a[href^="index"],.footer ul a{display:inline-block}
-.footer-tag{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:.9rem}
-.footer h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);font-weight:600;margin-bottom:1.1rem;font-family:var(--f-text)}
-.footer ul{list-style:none;display:grid;gap:.7rem;font-size:.94rem}
-.footer ul a{color:rgba(255,255,255,.78);transition:color .3s var(--ease)}
-.footer ul a:hover{color:var(--lime)}
-.footer-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;padding-top:2rem;font-size:.82rem;color:rgba(255,255,255,.45)}
-.footer-claim{font-family:var(--f-display);font-weight:600;letter-spacing:-.02em;color:var(--white);font-size:1rem}
-@media(max-width:760px){.footer-grid{grid-template-columns:1fr;gap:2rem}.footer-bottom{flex-direction:column;gap:.6rem}}
-.footer ul a{overflow-wrap:anywhere}
-
-
-/* ── cabecera y pie comunes con el resto de la web ── */
-:root{--line-dark:rgba(255,255,255,.14)}
-button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
-.nav .wrap,.footer .wrap{max-width:1240px}
-main{padding-top:4.6rem}
-.nav a[href],.footer a[href]{text-decoration:none}
-.nav a,.nav .btn{color:inherit}
-.nav-links a{color:var(--ink-60)}
-.nav .btn-primary{color:var(--navy)}
-.footer p,.footer li{color:inherit;font-size:inherit}
-.footer ul{margin:0;list-style:none}
-.footer li::marker{content:none}
-.footer h4{margin-top:0}
-.footer-tag{margin-top:.9rem!important}
-
-/* cabecera fija siempre por encima del contenido */
-body>.nav{position:fixed;z-index:100}
-.nav.open{background:#fff;-webkit-backdrop-filter:none;backdrop-filter:none}
-.nav.open .nav-links{background:#fff}
-@media(max-width:900px){.nav-links a{color:var(--ink)}}
-@media(max-width:900px){
-  .nav-in{gap:.75rem}
-  .nav-right .btn{white-space:nowrap;padding:.62rem 1rem;font-size:.84rem}
-}
-.footer-legal{width:100%;font-size:.74rem;color:rgba(255,255,255,.38)}
-.footer-legal a{color:rgba(255,255,255,.45)!important;text-decoration:none}
-.footer-legal a:hover{color:var(--lime)!important}
 </style>
 </head>
 <body>
 
-<header class="nav" id="nav">
-  <div class="wrap nav-in">
-    <a href="index.html" class="brand" aria-label="MonteAlto, inicio">
+<header class="top">
+  <div class="wrap top-in">
+    <a href="index.html" class="brand">
       <svg class="logo" viewBox="0 0 322.43 179.46" fill="none" aria-hidden="true">
         <path class="lg-m1" d="M24.68,179.26c-7.52,0-15.04.02-22.55-.03-.69,0-1.71.51-2.06-.46-.31-.84.56-1.36,1.04-1.94,3.02-3.66,6.06-7.31,9.07-10.98,7.13-8.67,14.24-17.36,21.38-26.02,5.42-6.57,10.92-13.08,16.32-19.67,7.3-8.91,14.55-17.86,21.82-26.79,6.9-8.49,13.88-16.92,20.69-25.48,6.87-8.64,13.88-17.15,20.84-25.71,6.71-8.26,13.42-16.52,20.19-24.74,1.84-2.23,3.59-4.55,5.35-6.85.88-1.15,1.52-1.74,2.76-.15,3.56,4.58,7.18,9.12,10.86,13.59,3.77,4.56,7.37,9.26,11.14,13.82,6.29,7.59,12.3,15.42,18.48,23.1.79.98.63,1.58-.12,2.49-4.7,5.66-9.34,11.38-13.99,17.08-2.14,2.62-4.33,5.21-6.38,7.9-1.25,1.65-2.13,1.73-3.47.02-4.05-5.17-8.24-10.24-12.37-15.36-.37-.45-.78-.88-1.1-1.36-1.22-1.83-2.12-1.81-3.63,0-7.75,9.29-15.7,18.42-23.48,27.68-4.79,5.7-9.59,11.41-14.36,17.12-7.45,8.92-14.87,17.87-22.31,26.8-6.94,8.32-13.65,16.83-20.73,25.04-1.82,2.11-3.82,4.15-5.33,6.47-2.43,3.73-5.51,4.87-9.91,4.56-6.02-.43-12.1-.11-18.15-.11,0-.02,0-.03,0-.05Z"/>
         <path class="lg-m2" d="M299.99,179.33c-6.64,0-13.27-.04-19.91.03-1.35.01-2.27-.3-3.2-1.38-4.32-4.98-8.86-9.78-13.15-14.8-8.02-9.4-15.93-18.89-23.84-28.38-1.17-1.4-2.14-1.84-3.19-.03-2.4,4.13-6.05,7.25-8.97,10.97-6.04,7.69-12.73,14.88-18.89,22.48-2.75,3.39-5.68,6.61-8.44,9.98-.66.81-1.28,1.12-2.35,1.11-13.57-.06-27.13-.05-40.7-.09-.61,0-1.43.46-1.82-.33-.45-.9.4-1.37.89-1.94,6.29-7.49,12.68-14.9,18.83-22.49,7.13-8.79,14.36-17.5,21.55-26.23,7.01-8.51,13.84-17.17,20.95-25.6,6.36-7.54,12.57-15.2,18.74-22.89,1.23-1.54,1.93-1.67,3.2-.12,6.04,7.42,12.1,14.82,18.26,22.14,2.61,3.11,5.39,6.07,7.97,9.23,6.44,7.88,13.22,15.47,19.71,23.3,7.16,8.64,14.33,17.26,21.59,25.81,4.76,5.6,9.38,11.32,14.2,16.87.49.57,1.33,1.05.9,1.94-.38.79-1.22.29-1.83.29-6.83.04-13.66.02-20.5.02v.1Z"/>
@@ -260,14 +153,7 @@ body>.nav{position:fixed;z-index:100}
       </svg>
       MonteAlto
     </a>
-    <nav class="nav-links" id="navLinks" aria-label="Principal">
-      <a href="index.html#resultados">Resultados</a>
-      <a href="sobre-nosotros.html">Sobre nosotros</a>
-    </nav>
-    <div class="nav-right">
-      <a href="index.html#agenda" class="btn btn-primary">Auditoría gratis</a>
-      <button type="button" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
-    </div>
+    <a href="index.html" class="volver">Volver a la web</a>
   </div>
 </header>
 
@@ -294,7 +180,7 @@ body>.nav{position:fixed;z-index:100}
     <div><dt>Titular</dt><dd class="ph">Nombre y apellidos, o razón social</dd></div>
     <div><dt>NIF / CIF</dt><dd class="ph">00000000X</dd></div>
     <div><dt>Domicilio</dt><dd class="ph">Dirección completa, código postal, localidad y provincia</dd></div>
-    <div><dt>Correo electrónico</dt><dd><a href="mailto:montealtomarketing@gmail.com">montealtomarketing@gmail.com</a></dd></div>
+    <div><dt>Correo electrónico</dt><dd><a href="mailto:hola@montealtomarketing.com">hola@montealtomarketing.com</a></dd></div>
     <div><dt>Sitio web</dt><dd class="ph">tudominio.com</dd></div>
     <div><dt>Actividad</dt><dd>Servicios de marketing digital y creación de contenido para redes sociales</dd></div>
   </dl>
@@ -311,7 +197,7 @@ body>.nav{position:fixed;z-index:100}
 
   <h3>Propiedad intelectual</h3>
   <p>Los textos, el diseño, el logotipo y la estructura de esta web pertenecen a MonteAlto, salvo cuando se indique otra cosa. No pueden reproducirse ni distribuirse sin autorización por escrito.</p>
-  <p>Los vídeos de clientes que aparecen en la web pertenecen a sus respectivos titulares y se muestran con su conocimiento, en el marco de los trabajos realizados para cada cliente. Las marcas y los nombres de los clientes citados pertenecen a sus propietarios y se mencionan a título informativo.</p>
+  <p>Los vídeos incrustados desde Instagram pertenecen a sus respectivos titulares y se muestran con su conocimiento, en el marco de los trabajos realizados para cada cliente. Las marcas y los nombres de los clientes citados pertenecen a sus propietarios y se mencionan a título informativo.</p>
 
   <h3>Responsabilidad</h3>
   <p>Procuramos que la información publicada esté actualizada y sea exacta, pero no podemos garantizar que esté libre de errores. Las cifras de resultados que aparecen en la web corresponden a trabajos reales y a un momento concreto; no suponen ninguna garantía de resultados equivalentes para otros proyectos.</p>
@@ -328,7 +214,7 @@ body>.nav{position:fixed;z-index:100}
   <p>Aquí te contamos qué hacemos con los datos que nos dejas en el formulario de contacto, conforme al Reglamento (UE) 2016/679 (RGPD) y a la Ley Orgánica 3/2018 de Protección de Datos Personales y garantía de los derechos digitales.</p>
 
   <h3>Quién trata tus datos</h3>
-  <p>El responsable del tratamiento es <span class="ph">el titular indicado en el aviso legal</span>, con los datos identificativos que figuran más arriba. Puedes escribirnos a <a href="mailto:montealtomarketing@gmail.com">montealtomarketing@gmail.com</a> para cualquier cuestión relacionada con tus datos.</p>
+  <p>El responsable del tratamiento es <span class="ph">el titular indicado en el aviso legal</span>, con los datos identificativos que figuran más arriba. Puedes escribirnos a <a href="mailto:hola@montealtomarketing.com">hola@montealtomarketing.com</a> para cualquier cuestión relacionada con tus datos.</p>
 
   <h3>Qué datos recogemos</h3>
   <p>Solo los que escribes tú en el formulario, más dos que se registran de forma automática:</p>
@@ -365,7 +251,7 @@ body>.nav{position:fixed;z-index:100}
   <p>Aparte de Google, nadie más tiene acceso a tus datos, salvo obligación legal.</p>
 
   <h3>Qué derechos tienes</h3>
-  <p>Puedes ejercer en cualquier momento los siguientes derechos, gratis y escribiendo a <a href="mailto:montealtomarketing@gmail.com">montealtomarketing@gmail.com</a>:</p>
+  <p>Puedes ejercer en cualquier momento los siguientes derechos, gratis y escribiendo a <a href="mailto:hola@montealtomarketing.com">hola@montealtomarketing.com</a>:</p>
   <ul>
     <li><strong>Acceso:</strong> saber qué datos tuyos tenemos.</li>
     <li><strong>Rectificación:</strong> corregir los que estén mal.</li>
@@ -388,21 +274,38 @@ body>.nav{position:fixed;z-index:100}
 <!-- ═══════════════ COOKIES ═══════════════ -->
 <section class="wrap">
   <h2 id="cookies">Política de cookies</h2>
-  <p>Una cookie es un archivo pequeño que una web guarda en tu dispositivo para recordar algo. Aquí no usamos ninguna.</p>
+  <p>Una cookie es un archivo pequeño que una web guarda en tu dispositivo para recordar algo. Aquí usamos muy pocas, y te explicamos exactamente cuáles.</p>
 
   <h3>Esta web no te rastrea</h3>
   <p>No tenemos Google Analytics, ni píxel de Meta, ni ninguna otra herramienta de analítica o publicidad. No sabemos quién eres hasta que nos escribes tú.</p>
 
-  <p>Esta web no instala cookies: ni propias ni de terceros.</p>
+  <table class="tabla">
+    <thead>
+      <tr><th>Qué guarda</th><th>Quién</th><th>Para qué y cuánto dura</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ma-cookies-2</td>
+        <td>MonteAlto</td>
+        <td>Recuerda si aceptaste o rechazaste los contenidos de Instagram, para no volver a preguntártelo. Es almacenamiento local del navegador, no una cookie, y no sale de tu dispositivo. Permanece hasta que borres los datos de navegación.</td>
+      </tr>
+      <tr>
+        <td>Cookies de Instagram</td>
+        <td>Meta Platforms Ireland Ltd.</td>
+        <td>Solo si aceptas cargar los reels. Meta las usa para reproducir el vídeo y para sus propios fines. Su duración y finalidad las decide Meta, no nosotros.</td>
+      </tr>
+    </tbody>
+  </table>
 
-  <h3>Vídeos de la portada</h3>
-  <p>Los vídeos de la portada se sirven desde esta misma web. No se cargan desde Instagram ni desde ninguna otra plataforma, así que no instalan cookies.</p>
+  <h3>Los reels no se cargan sin tu permiso</h3>
+  <p>Los vídeos de la portada vienen de Instagram, y cargarlos permite a Meta instalar sus cookies. Por eso no se cargan sin tu permiso: si aceptas en el aviso inicial, los reels se cargan al llegar a ellos; si rechazas o aún no has respondido, verás una portada con un botón y el vídeo solo aparece si lo pulsas. Si prefieres no cargarlos, la web funciona igual y puedes ver cada reel en Instagram desde el enlace que hay debajo.</p>
 
   <h3>Tipografías</h3>
   <p>Las tipografías de la web (Sora e Inter) se cargan desde Google Fonts. Eso no instala cookies, pero sí implica que tu navegador hace una petición a un servidor de Google, que recibe tu dirección IP. Si prefieres evitarlo, puedes bloquear ese dominio en tu navegador; la web se verá con otra tipografía pero seguirá funcionando.</p>
 
   <h3>Cambiar de opinión</h3>
-  <p>Puedes bloquear o eliminar cookies desde los ajustes de tu navegador:</p>
+  <p>Para revocar lo que elegiste, borra los datos de navegación de este sitio en la configuración de tu navegador. La próxima vez que entres, volveremos a preguntarte.</p>
+  <p>También puedes bloquear o eliminar cookies desde los ajustes de tu navegador:</p>
   <ul>
     <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
     <li><a href="https://support.mozilla.org/es/kb/Borrar%20cookies" target="_blank" rel="noopener">Mozilla Firefox</a></li>
@@ -413,54 +316,15 @@ body>.nav{position:fixed;z-index:100}
 
 </main>
 
-<footer class="footer">
+<footer class="pie">
   <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <a href="index.html" class="brand">
-          <svg class="logo inv" viewBox="0 0 322.43 179.46" fill="none" aria-hidden="true">
-            <path class="lg-m1" d="M24.68,179.26c-7.52,0-15.04.02-22.55-.03-.69,0-1.71.51-2.06-.46-.31-.84.56-1.36,1.04-1.94,3.02-3.66,6.06-7.31,9.07-10.98,7.13-8.67,14.24-17.36,21.38-26.02,5.42-6.57,10.92-13.08,16.32-19.67,7.3-8.91,14.55-17.86,21.82-26.79,6.9-8.49,13.88-16.92,20.69-25.48,6.87-8.64,13.88-17.15,20.84-25.71,6.71-8.26,13.42-16.52,20.19-24.74,1.84-2.23,3.59-4.55,5.35-6.85.88-1.15,1.52-1.74,2.76-.15,3.56,4.58,7.18,9.12,10.86,13.59,3.77,4.56,7.37,9.26,11.14,13.82,6.29,7.59,12.3,15.42,18.48,23.1.79.98.63,1.58-.12,2.49-4.7,5.66-9.34,11.38-13.99,17.08-2.14,2.62-4.33,5.21-6.38,7.9-1.25,1.65-2.13,1.73-3.47.02-4.05-5.17-8.24-10.24-12.37-15.36-.37-.45-.78-.88-1.1-1.36-1.22-1.83-2.12-1.81-3.63,0-7.75,9.29-15.7,18.42-23.48,27.68-4.79,5.7-9.59,11.41-14.36,17.12-7.45,8.92-14.87,17.87-22.31,26.8-6.94,8.32-13.65,16.83-20.73,25.04-1.82,2.11-3.82,4.15-5.33,6.47-2.43,3.73-5.51,4.87-9.91,4.56-6.02-.43-12.1-.11-18.15-.11,0-.02,0-.03,0-.05Z"/>
-            <path class="lg-m2" d="M299.99,179.33c-6.64,0-13.27-.04-19.91.03-1.35.01-2.27-.3-3.2-1.38-4.32-4.98-8.86-9.78-13.15-14.8-8.02-9.4-15.93-18.89-23.84-28.38-1.17-1.4-2.14-1.84-3.19-.03-2.4,4.13-6.05,7.25-8.97,10.97-6.04,7.69-12.73,14.88-18.89,22.48-2.75,3.39-5.68,6.61-8.44,9.98-.66.81-1.28,1.12-2.35,1.11-13.57-.06-27.13-.05-40.7-.09-.61,0-1.43.46-1.82-.33-.45-.9.4-1.37.89-1.94,6.29-7.49,12.68-14.9,18.83-22.49,7.13-8.79,14.36-17.5,21.55-26.23,7.01-8.51,13.84-17.17,20.95-25.6,6.36-7.54,12.57-15.2,18.74-22.89,1.23-1.54,1.93-1.67,3.2-.12,6.04,7.42,12.1,14.82,18.26,22.14,2.61,3.11,5.39,6.07,7.97,9.23,6.44,7.88,13.22,15.47,19.71,23.3,7.16,8.64,14.33,17.26,21.59,25.81,4.76,5.6,9.38,11.32,14.2,16.87.49.57,1.33,1.05.9,1.94-.38.79-1.22.29-1.83.29-6.83.04-13.66.02-20.5.02v.1Z"/>
-            <path class="lg-a"  d="M205.83,17.61c18.77-5.82,37.53-11.63,56.82-17.61-2.84,20.92-6.87,41.11-10.07,62.14-2.72-4.43-5.3-8.23-7.46-12.26-1.48-2.76-3.52-5.11-5.05-7.81-.53-.93-1.04-.97-1.75-.11-4.19,5.11-8.45,10.16-12.6,15.3-2.98,3.69-5.76,7.54-8.74,11.23-6.03,7.49-12.24,14.84-18.19,22.39-6.84,8.68-13.8,17.27-20.81,25.82-4.79,5.84-9.43,11.8-14.42,17.5-1.51,1.72-2.82,3.67-4.27,5.48-1.04,1.3-1.64,1.11-2.61-.07-4.3-5.24-8.76-10.37-13-15.66-1.52-1.9-2.41-2.15-4-.05-4.92,6.49-10.27,12.65-15.35,19.01-9.27,11.58-18.57,23.14-27.95,34.63-.98,1.2-1.92,1.8-3.57,1.75-5.27-.16-10.54-.09-15.82-.14-.73,0-1.62.28-1.99-.74-.31-.86.48-1.21.87-1.69,5.87-7.23,11.86-14.36,17.64-21.65,7.23-9.12,14.61-18.12,22.04-27.08,6.99-8.44,13.84-17,20.73-25.52,1.34-1.65,2.6-3.37,3.85-5.08.84-1.14,1.55-1.19,2.5-.06,3.44,4.09,6.98,8.09,10.37,12.22.47.57.88,1.25,1.4,1.8,3.67,3.91,3.57,3.83,6.93-.56,3.82-5,7.9-9.81,11.77-14.77,5.61-7.18,11.33-14.26,16.98-21.4,3.67-4.64,7.41-9.26,11.17-13.83,5.54-6.73,10.76-13.73,16.14-20.6,2.57-3.28,5.26-6.48,7.92-9.69,1.94-2.34,1.32-2.98-1.02-3.87-6.39-2.41-12.09-6.28-18.47-9.04Z"/>
-          </svg>
-          MonteAlto
-        </a>
-        <p class="footer-tag">Agencia de crecimiento orgánico</p>
-      </div>
-      <div>
-        <h4>Páginas</h4>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contacto</h4>
-        <ul>
-          <li><a href="mailto:montealtomarketing@gmail.com">montealtomarketing@gmail.com</a></li>
-          <li><a href="index.html#agenda">Pide tu auditoría gratuita</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p class="footer-claim">Estrategia. Contenido. Comunidad. Crecimiento.</p>
-      <p>© <span id="year">2026</span> MonteAlto. Todos los derechos reservados.</p>
-      <p class="footer-legal"><a href="legal.html#aviso">Aviso legal</a> · <a href="legal.html#privacidad">Privacidad</a> · <a href="legal.html#cookies">Cookies</a></p>
-    </div>
+    <p class="pie-claim">MonteAlto</p>
+    <p>
+      ¿Dudas sobre tus datos? Escríbenos a <a href="mailto:hola@montealtomarketing.com">hola@montealtomarketing.com</a>.<br>
+      <a href="index.html">Volver a la web</a>
+    </p>
   </div>
 </footer>
 
-<script>
-/* menú del móvil */
-(function(){
-  var n=document.getElementById('nav'), b=n && n.querySelector('.nav-toggle');
-  if(!b) return;
-  function set(o){ n.classList.toggle('open',o); b.setAttribute('aria-expanded',o?'true':'false'); b.setAttribute('aria-label',o?'Cerrar menú':'Abrir menú'); }
-  b.addEventListener('click',function(e){ e.stopPropagation(); set(!n.classList.contains('open')); });
-  n.querySelectorAll('.nav-links a').forEach(function(a){ a.addEventListener('click',function(){ set(false); }); });
-  document.addEventListener('click',function(e){ if(!n.contains(e.target)) set(false); });
-  document.addEventListener('keydown',function(e){ if(e.key==='Escape') set(false); });
-})();
-</script>
 </body>
 </html>
