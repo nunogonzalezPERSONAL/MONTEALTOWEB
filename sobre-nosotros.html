@@ -697,6 +697,19 @@ h3{font-size:1.15rem;font-weight:600;letter-spacing:-.015em;line-height:1.3}
   #contacto .btn{margin-top:1.4rem}
 }
 @media(max-width:360px){.case{grid-template-columns:70px 1fr}.case-portrait img{width:50px!important}.case-body{padding:.9rem}.case-metrics.two .metric-n{font-size:1.25rem!important}}
+
+/* biografías de los socios en dos párrafos */
+.founder-bio p{margin:0}
+.founder-bio p+p{margin-top:.65rem}
+@media(max-width:700px){
+  /* en móvil cada socio en una fila: vídeo a la izquierda, nombre a la derecha y la biografía debajo */
+  .founders{grid-template-columns:1fr!important;gap:2.6rem!important}
+  .founder{display:grid!important;grid-template-columns:112px 1fr;column-gap:1rem;align-items:end}
+  .founder-vid{grid-column:1;grid-row:1/3;margin-bottom:0!important}
+  .founder-name{grid-column:2;align-self:end}
+  .founder-role{grid-column:2;align-self:start}
+  .founder-bio{grid-column:1/-1;font-size:.9rem!important;margin-top:1rem!important}
+}
 /* ═══════════════ CTA INTERMEDIO ═══════════════ */
 .mid-cta{margin-top:clamp(2.5rem,5vw,3.5rem);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.2rem 2rem;
   padding:clamp(1.5rem,3vw,2rem) clamp(1.5rem,3vw,2.4rem);border-radius:18px;background:var(--navy);color:var(--white)}
@@ -1173,8 +1186,10 @@ body>.nav{position:fixed;z-index:100}
         <span class="founder-num">01</span>
         <p class="founder-name">Nuño González de la Pisa</p>
         <span class="founder-role">Crecimiento orgánico y marketing</span>
-        <p class="founder-bio m-only">Emprendedor. Lleva trabajando en el sector desde los 16 años.</p>
-        <p class="founder-bio d-only">Emprendedor. Lleva trabajando en el sector desde los 16 años; a los 19 vendió su productora audiovisual para centrarse en la carrera universitaria.</p>
+        <div class="founder-bio">
+          <p>Emprendedor y apasionado del mundo audiovisual y la comunicación digital. Con más de cinco años de experiencia en la creación de contenido y las redes sociales, fundó su primera productora audiovisual, que vendió con 20 años para centrarse en su formación y dar un nuevo rumbo a su trayectoria profesional.</p>
+          <p>Actualmente, combina su visión creativa y empresarial para ayudar a marcas y negocios a crecer en redes sociales a través de estrategias de contenido orgánico que generan resultados reales.</p>
+        </div>
         <span class="founder-cue"><i aria-hidden="true"></i>Pasa el ratón</span>
       </article>
       <article class="founder rv rv-d1">
@@ -1182,8 +1197,10 @@ body>.nav{position:fixed;z-index:100}
         <span class="founder-num">02</span>
         <p class="founder-name">Ángel González Chimeno</p>
         <span class="founder-role">Producto y funneling</span>
-        <p class="founder-bio m-only">Experto en funneling y estrategia de ventas.</p>
-        <p class="founder-bio d-only">Experto en funneling y estrategia de ventas.</p>
+        <div class="founder-bio">
+          <p>Diseñador de productos interactivos, especializado en el desarrollo de embudos de conversión y estrategias de venta digital. Combina sus conocimientos en tecnología y diseño para ayudar a sus clientes.</p>
+          <p>Actualmente, es responsable del desarrollo y la gestión de los sistemas tecnológicos tanto de Monte Alto como los de los clientes, impulsando la automatización mediante IA, la eficiencia y la escalabilidad de los negocios.</p>
+        </div>
         <span class="founder-cue"><i aria-hidden="true"></i>Pasa el ratón</span>
       </article>
     </div>
