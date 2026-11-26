@@ -1422,16 +1422,16 @@ body>.nav{position:fixed;z-index:100}
           <input type="text" id="f-nombre" name="nombre" autocomplete="name" required>
         </div>
         <div class="field">
-          <label for="f-email">Email</label>
-          <input type="email" id="f-email" name="email" autocomplete="email" required>
+          <label for="f-tel">WhatsApp</label>
+          <input type="tel" id="f-tel" name="telefono" autocomplete="tel" inputmode="tel" placeholder="+34 600 000 000" pattern="[+]?[0-9 ()\-]{9,20}" required>
         </div>
         <div class="field">
           <label for="f-marca">Marca o cuenta</label>
           <input type="text" id="f-marca" name="marca" placeholder="@tumarca" required>
         </div>
         <div class="field">
-          <label for="f-tel">Teléfono <span>opcional</span></label>
-          <input type="tel" id="f-tel" name="telefono" autocomplete="tel">
+          <label for="f-email">Email <span>opcional</span></label>
+          <input type="email" id="f-email" name="email" autocomplete="email">
         </div>
         <div class="field field-full">
           <label for="f-msg">Qué necesitas <span>opcional</span></label>
@@ -1455,7 +1455,7 @@ body>.nav{position:fixed;z-index:100}
       <p class="form-msg" id="formMsg" role="status"></p>
     </form>
 
-    <p class="final-note rv rv-d2">Te respondemos en menos de 24 horas. Sin compromiso.</p>
+    <p class="final-note rv rv-d2">Te escribimos por WhatsApp en menos de 24 horas. Sin compromiso.</p>
   </div>
 </section>
 
@@ -1731,7 +1731,7 @@ body>.nav{position:fixed;z-index:100}
         var falta = document.getElementById('f-consent');
         aviso(falta && !falta.checked
           ? 'Para enviarlo tienes que aceptar la pol&iacute;tica de privacidad.'
-          : 'Revisa los campos marcados en rojo.', true);
+          : (primero && primero.id==='f-tel' ? 'Pon tu número de WhatsApp para poder escribirte.' : 'Revisa los campos marcados en rojo.'), true);
         return;
       }
 
@@ -1752,7 +1752,7 @@ body>.nav{position:fixed;z-index:100}
         .then(function(d){
           if(!d || !d.ok) throw new Error(d && d.error || 'error');
           form.classList.add('sent');
-          aviso('<b>Recibido.</b> Te respondemos en menos de 24 horas.', false);
+          aviso('<b>Recibido.</b> Te escribimos por WhatsApp en menos de 24 horas.', false);
         })
         .catch(function(){
           btn.disabled = false;
